@@ -1,13 +1,16 @@
 <?php
 
-add_action("customize_register", "my_theme_options");
+function testtheme_setup(){
+}
 
-function my_theme_options($wp_customize){
-    //print($wp_customize);
+function my_customize_register($wp_customize){
+    $wp_customize->add_section("header_image", array(
+	"title" => "image",
+	"priority" => 10,
+    ));
+
     
 }
 
-
-
-
-?>
+add_action("after_setup_theme", "testtheme_setup");
+add_action("customize_register", "my_customize_register");

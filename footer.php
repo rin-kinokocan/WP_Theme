@@ -1,5 +1,5 @@
 <footer id="colophon" class="site">
-    <p><?php bloginfo("name"); ?></p>
+    <p class="rin-blogname"><?php bloginfo("name"); ?></p>
 </footer>
 
 <?php wp_footer(); ?>
